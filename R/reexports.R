@@ -28,21 +28,6 @@ rlang::`%||%`
 #' @importFrom rlang "%|%"
 rlang::`%|%`
 
-# ----------------------- broom -------------------------------------
-
-#' @export
-#' @importFrom broomExtra tidy
-broomExtra::tidy
-
-#' @export
-#' @importFrom broomExtra glance
-broomExtra::glance
-
-#' @export
-#' @importFrom broomExtra augment
-broomExtra::augment
-
-
 # ----------------------- zeallot -------------------------------------
 
 #' @export
@@ -66,3 +51,24 @@ crayon::red
 #' @export
 #' @importFrom crayon yellow
 crayon::yellow
+
+
+# ----------------------- misc -------------------------------------
+
+#' @export
+#' @importFrom broomExtra easystats_to_tidy_names
+broomExtra::easystats_to_tidy_names
+
+# ----------------------- broom -------------------------------------
+
+#' @export
+#' @importFrom broomExtra tidy
+broomExtra::tidy
+
+#' @export
+#' @importFrom broomExtra glance
+broomExtra::glance
+
+#' @export
+#' @importFrom broomExtra augment
+broomExtra::augment

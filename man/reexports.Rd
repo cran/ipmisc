@@ -10,14 +10,15 @@
 \alias{as_tibble}
 \alias{\%||\%}
 \alias{\%|\%}
-\alias{tidy}
-\alias{glance}
-\alias{augment}
 \alias{\%<-\%}
 \alias{blue}
 \alias{green}
 \alias{red}
 \alias{yellow}
+\alias{easystats_to_tidy_names}
+\alias{tidy}
+\alias{glance}
+\alias{augment}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -25,7 +26,7 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{broomExtra}{\code{\link[broomExtra]{\%$\%}}, \code{\link[broomExtra]{\%<>\%}}, \code{\link[broomExtra]{\%>\%}}, \code{\link[broomExtra]{augment}}, \code{\link[broomExtra]{glance}}, \code{\link[broomExtra]{tidy}}}
+  \item{broomExtra}{\code{\link[broomExtra]{\%$\%}}, \code{\link[broomExtra]{\%<>\%}}, \code{\link[broomExtra]{\%>\%}}, \code{\link[broomExtra]{augment}}, \code{\link[broomExtra]{easystats_to_tidy_names}}, \code{\link[broomExtra]{glance}}, \code{\link[broomExtra]{tidy}}}
 
   \item{crayon}{\code{\link[crayon]{blue}}, \code{\link[crayon]{green}}, \code{\link[crayon]{red}}, \code{\link[crayon]{yellow}}}
 
