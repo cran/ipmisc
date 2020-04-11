@@ -1,20 +1,24 @@
 # ----------------------- tidyverse -------------------------------------
 
 #' @export
-#' @importFrom broomExtra "%>%"
-broomExtra::`%>%`
+#' @importFrom magrittr "%>%"
+magrittr::`%>%`
 
 #' @export
-#' @importFrom broomExtra "%<>%"
-broomExtra::`%<>%`
+#' @importFrom magrittr "%<>%"
+magrittr::`%<>%`
 
 #' @export
-#' @importFrom broomExtra "%$%"
-broomExtra::`%$%`
+#' @importFrom magrittr "%$%"
+magrittr::`%$%`
 
 #' @export
 #' @importFrom tibble tibble
 tibble::tibble
+
+#' @export
+#' @importFrom tibble enframe
+tibble::enframe
 
 #' @export
 #' @importFrom tibble as_tibble
@@ -51,24 +55,3 @@ crayon::red
 #' @export
 #' @importFrom crayon yellow
 crayon::yellow
-
-
-# ----------------------- misc -------------------------------------
-
-#' @export
-#' @importFrom broomExtra easystats_to_tidy_names
-broomExtra::easystats_to_tidy_names
-
-# ----------------------- broom -------------------------------------
-
-#' @export
-#' @importFrom broomExtra tidy
-broomExtra::tidy
-
-#' @export
-#' @importFrom broomExtra glance
-broomExtra::glance
-
-#' @export
-#' @importFrom broomExtra augment
-broomExtra::augment

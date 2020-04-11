@@ -22,7 +22,7 @@ state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/)
 [![minimal R
-version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
+version](https://img.shields.io/badge/R%3E%3D-3.6.0-6666ff.svg)](https://cran.r-project.org/)
 [![Coverage
 Status](https://img.shields.io/codecov/c/github/IndrajeetPatil/ipmisc/master.svg)](https://codecov.io/github/IndrajeetPatil/ipmisc?branch=master)
 [![Coverage
@@ -35,11 +35,16 @@ The `ipmisc` provides functions for data cleaning and formatting. These
 functions form data cleaning backend for the following packages:
 
   - `ggstatsplot`: <https://indrajeetpatil.github.io/ggstatsplot/>
+
   - `statsExpressions`:
     <https://indrajeetpatil.github.io/statsExpressions/>
+
   - `pairwiseComparisons`:
     <https://indrajeetpatil.github.io/pairwiseComparisons/>
+
   - `groupedstats`: <https://indrajeetpatil.github.io/groupedstats/>
+
+  - `tidyBF`: <https://indrajeetpatil.github.io/tidyBF/>
 
 # Installation
 

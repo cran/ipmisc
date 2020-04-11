@@ -7,6 +7,7 @@
 \alias{\%<>\%}
 \alias{\%$\%}
 \alias{tibble}
+\alias{enframe}
 \alias{as_tibble}
 \alias{\%||\%}
 \alias{\%|\%}
@@ -15,10 +16,6 @@
 \alias{green}
 \alias{red}
 \alias{yellow}
-\alias{easystats_to_tidy_names}
-\alias{tidy}
-\alias{glance}
-\alias{augment}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -26,13 +23,13 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{broomExtra}{\code{\link[broomExtra]{\%$\%}}, \code{\link[broomExtra]{\%<>\%}}, \code{\link[broomExtra]{\%>\%}}, \code{\link[broomExtra]{augment}}, \code{\link[broomExtra]{easystats_to_tidy_names}}, \code{\link[broomExtra]{glance}}, \code{\link[broomExtra]{tidy}}}
-
   \item{crayon}{\code{\link[crayon]{blue}}, \code{\link[crayon]{green}}, \code{\link[crayon]{red}}, \code{\link[crayon]{yellow}}}
+
+  \item{magrittr}{\code{\link[magrittr]{\%$\%}}, \code{\link[magrittr]{\%<>\%}}, \code{\link[magrittr]{\%>\%}}}
 
   \item{rlang}{\code{\link[rlang]{\%|\%}}, \code{\link[rlang]{\%||\%}}}
 
-  \item{tibble}{\code{\link[tibble]{as_tibble}}, \code{\link[tibble]{tibble}}}
+  \item{tibble}{\code{\link[tibble]{as_tibble}}, \code{\link[tibble]{enframe}}, \code{\link[tibble]{tibble}}}
 
   \item{zeallot}{\code{\link[zeallot]{\%<-\%}}}
 }}
