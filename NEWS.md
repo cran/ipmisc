@@ -1,3 +1,13 @@
+# ipmisc 3.0.0
+
+BREAKING CHANGES
+
+  - Removes the unused `sort_xy` function. This removes `forcats` from `imports`.
+  
+  - Removes the unused `normality_message` and `shapiro_message` functions.
+  
+  - Removes the unneeded `movies_wide` and `movies_long` datasets.
+
 # ipmisc 2.0.0
 
   - New function: `stats_type_switch`.
