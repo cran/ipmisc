@@ -1,7 +1,7 @@
 Type: Package
 Package: ipmisc
 Title: Miscellaneous Functions for Data Cleaning and Analysis
-Version: 3.2.0
+Version: 4.0.0
 Authors@R: 
     person(given = "Indrajeet",
            family = "Patil",
@@ -26,8 +26,8 @@ Language: en-US
 LazyData: true
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2020-09-13 19:54:58 UTC; inp099
+Packaged: 2020-10-01 08:30:46 UTC; inp099
 Author: Indrajeet Patil [aut, cre, cph]
     (<https://orcid.org/0000-0003-1995-6531>)
 Repository: CRAN
-Date/Publication: 2020-09-13 20:50:03 UTC
+Date/Publication: 2020-10-05 08:50:05 UTC

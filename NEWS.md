@@ -1,3 +1,11 @@
+# ipmisc 4.0.0.9000
+ 
+  - `specify_decimal_p` no longer shows *p*-values less than 0.001 as
+    `"< 0.001"`, but rather in scientific notation.
+    
+  - `p_value_formatter` function is removed as it is no longer used in the
+    `ggstatsverse`.
+
 # ipmisc 3.2.0
 
   - Hosts `easystats_to_tidy_names` function here now instead of `broomExtra`
@@ -13,8 +21,6 @@
   - New helper function `p_value_formatter`.
 
 # ipmisc 3.0.0
-
-BREAKING CHANGES
 
   - Removes the unused `sort_xy` function. This removes `forcats` from `imports`.
   
