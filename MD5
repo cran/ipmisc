@@ -1,11 +1,11 @@
-f4a0adee3b1914654e526dde1fabd6fd *DESCRIPTION
+d87307894a04a70074a69cc72ba59d63 *DESCRIPTION
 3c34afdc3adf82d2448f12715a255122 *LICENSE
-802500af1a7836efc7e9e05e21f579ae *NAMESPACE
-d959bced33a0383b9991ea91fb120b94 *NEWS.md
+88c07c854d34fc8442c7da647e891bb4 *NAMESPACE
+bbb3a3a2939c9e9b812d105682ab35d4 *NEWS.md
 984bf11a6a29bc284f88bfd1052b9a8f *R/data.R
 ca086703597b9fda43734af52f856f65 *R/global_vars.R
 046e4c75d5f09ee6a6a44140f5f48a63 *R/long_to_wide_converter.R
-bc89c6ec08245a4a63b602d7ddfda897 *R/reexports.R
+3e2ce5c6ba2d4087298f0ded0a83da7f *R/reexports.R
 d23bda5562b2d1558829eee679be805c *R/specify_decimal_p.R
 d124797b71c9a584d315d2e678ae1d0d *R/stats_type_switch.R
 782cd441c6a51a0279f441cc19e29273 *README.md
@@ -15,7 +15,7 @@ c5ee4fa2f5ea32bdf87e02ea71a415f8 *data/iris_long.rdata
 802fc4c2df4afaaf8de39a8b423f5a7b *man/bugs_long.Rd
 f0eb6a1e5aef4ff056b4d8fe5f7047c7 *man/iris_long.Rd
 8e70937362d0eb4e4b668f65d2b4f16d *man/long_to_wide_converter.Rd
-d28deec9ae466a23e06222f69f4f6624 *man/reexports.Rd
+854d9e021183e1115dfc540936c7c28d *man/reexports.Rd
 e31dd214962f4c36cc22be114e9efeda *man/specify_decimal_p.Rd
 02cdf59e2c5af4cffd3952a44aa7e1b0 *man/stats_type_switch.Rd
 dbd9bab057163c01c320d0b9d3bb9620 *tests/spelling.R
