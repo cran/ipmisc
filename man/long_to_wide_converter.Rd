@@ -16,19 +16,29 @@ long_to_wide_converter(
 }
 \arguments{
 \item{data}{A dataframe (or a tibble) from which variables specified are to
-be taken. A matrix or a table will \strong{not} be accepted.}
+be taken. Other data types (e.g., matrix,table, array, etc.) will \strong{not}
+be accepted.}
 
-\item{x}{The grouping variable from the dataframe \code{data}.}
+\item{x}{The grouping (or independent) variable from the dataframe \code{data}. In
+case of a repeated measures or within-subjects design, if \code{subject.id}
+argument is not available or not explicitly specified, the function assumes
+that the data has already been sorted by such an id by the user and creates
+an internal identifier. So if your data is \strong{not} sorted, the results
+\emph{can} be inaccurate when there are more than two levels in \code{x} and there
+are \code{NA}s present. The data is expected to be sorted by user in
+subject-1,subject-2, ..., pattern.}
 
-\item{y}{The response (a.k.a. outcome or dependent) variable from the
+\item{y}{The response (or outcome or dependent) variable from the
 dataframe \code{data}.}
 
-\item{subject.id}{Relevant in case of repeated measures design (\code{paired = TRUE}, i.e.), it specifies the subject or repeated measures identifier.
-\strong{Important}: Note that if this argument is \code{NULL} (which is the default),
-the function assumes that the data has already been sorted by such an id by
-the user and creates an internal identifier. So if your data is \strong{not}
-sorted and you leave this argument unspecified, the results can be
-inaccurate.}
+\item{subject.id}{Relevant in case of a repeated measures or within-subjects
+design (\code{paired = TRUE}, i.e.), it specifies the subject or repeated
+measures identifier. \strong{Important}: Note that if this argument is \code{NULL}
+(which is the default), the function assumes that the data has already been
+sorted by such an id by the user and creates an internal identifier. So if
+your data is \strong{not} sorted and you leave this argument unspecified, the
+results \emph{can} be inaccurate when there are more than two levels in \code{x} and
+there are \code{NA}s present.}
 
 \item{paired}{Logical that decides whether the experimental design is
 repeated measures/within-subjects or between-subjects. The default is
@@ -44,13 +54,12 @@ converted from long/tidy to wide (default: \code{TRUE}). Relevant only if
 A dataframe with \code{NA}s removed.
 }
 \description{
-\Sexpr[results=rd, stage=render]{rlang:::lifecycle("maturing")}
-
 This conversion is helpful mostly for repeated measures design, where
 removing \code{NA}s by participant can be a bit tedious.
 
-It doesn't make sense to spread the dataframe to wide format when the measure
-is not repeated, so if \code{paired = TRUE}, \code{spread} argument will be ignored.
+It does not make sense to spread the dataframe to wide format when the
+measure is not repeated, so if \code{paired = TRUE}, \code{spread} argument will be
+ignored.
 }
 \examples{
 # for reproducibility

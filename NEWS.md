@@ -1,3 +1,7 @@
+# ipmisc 6.0.2
+
+  - Minor improvements to function documentation.
+
 # ipmisc 6.0.0
 
   - Removes `specify_decimal_p` alias for `format_num`.

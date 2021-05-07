@@ -7,15 +7,23 @@
 stats_type_switch(type)
 }
 \arguments{
-\item{type}{Character string describing the type of statistics.}
+\item{type}{A character specifying the type of statistical approach:
+\itemize{
+\item \code{"parametric"}
+\item \code{"nonparametric"}
+\item \code{"robust"}
+\item \code{"bayes"}
+}
+
+This argument also accepts the following abbreviations: \code{"p"} (for
+\emph{parametric}), \code{"np"} (for \emph{nonparametric}), \code{"r"} (for \emph{robust}), \code{"bf"}
+(for \emph{Bayes Factor} or \emph{Bayesian}).}
 }
 \description{
-\Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
-
 Relevant mostly for \code{ggstatsplot} and \code{statsExpressions} packages, where
-there are four types of statistics are supported: parametric, non-parametric,
-robust, and Bayesian. This switch function converts strings entered by users
-to a common pattern.
+different statistical approaches are supported via this argument: parametric,
+non-parametric, robust, and Bayesian. This switch function converts strings
+entered by users to a common pattern for convenience.
 }
 \examples{
 stats_type_switch("p")

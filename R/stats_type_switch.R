@@ -3,14 +3,20 @@
 #'
 #' @description
 #'
-#' \Sexpr[results=rd, stage=render]{rlang:::lifecycle("stable")}
-#'
 #' Relevant mostly for `ggstatsplot` and `statsExpressions` packages, where
-#' there are four types of statistics are supported: parametric, non-parametric,
-#' robust, and Bayesian. This switch function converts strings entered by users
-#' to a common pattern.
+#' different statistical approaches are supported via this argument: parametric,
+#' non-parametric, robust, and Bayesian. This switch function converts strings
+#' entered by users to a common pattern for convenience.
 #'
-#' @param type Character string describing the type of statistics.
+#' @param type A character specifying the type of statistical approach:
+#'   - `"parametric"`
+#'   - `"nonparametric"`
+#'   - `"robust"`
+#'   - `"bayes"`
+#'
+#' This argument also accepts the following abbreviations: `"p"` (for
+#' *parametric*), `"np"` (for *nonparametric*), `"r"` (for *robust*), `"bf"`
+#' (for *Bayes Factor* or *Bayesian*).
 #'
 #' @importFrom dplyr case_when
 #'

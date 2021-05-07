@@ -3,26 +3,34 @@
 #'
 #' @description
 #'
-#' \Sexpr[results=rd, stage=render]{rlang:::lifecycle("maturing")}
-#'
 #' This conversion is helpful mostly for repeated measures design, where
 #' removing `NA`s by participant can be a bit tedious.
 #'
-#' It doesn't make sense to spread the dataframe to wide format when the measure
-#' is not repeated, so if `paired = TRUE`, `spread` argument will be ignored.
+#' It does not make sense to spread the dataframe to wide format when the
+#' measure is not repeated, so if `paired = TRUE`, `spread` argument will be
+#' ignored.
 #'
 #' @param data A dataframe (or a tibble) from which variables specified are to
-#'   be taken. A matrix or a table will **not** be accepted.
-#' @param x The grouping variable from the dataframe `data`.
-#' @param y The response (a.k.a. outcome or dependent) variable from the
+#'   be taken. Other data types (e.g., matrix,table, array, etc.) will **not**
+#'   be accepted.
+#' @param x The grouping (or independent) variable from the dataframe `data`. In
+#'   case of a repeated measures or within-subjects design, if `subject.id`
+#'   argument is not available or not explicitly specified, the function assumes
+#'   that the data has already been sorted by such an id by the user and creates
+#'   an internal identifier. So if your data is **not** sorted, the results
+#'   *can* be inaccurate when there are more than two levels in `x` and there
+#'   are `NA`s present. The data is expected to be sorted by user in
+#'   subject-1,subject-2, ..., pattern.
+#' @param y The response (or outcome or dependent) variable from the
 #'   dataframe `data`.
-#' @param subject.id Relevant in case of repeated measures design (`paired =
-#'   TRUE`, i.e.), it specifies the subject or repeated measures identifier.
-#'   **Important**: Note that if this argument is `NULL` (which is the default),
-#'   the function assumes that the data has already been sorted by such an id by
-#'   the user and creates an internal identifier. So if your data is **not**
-#'   sorted and you leave this argument unspecified, the results can be
-#'   inaccurate.
+#' @param subject.id Relevant in case of a repeated measures or within-subjects
+#'   design (`paired = TRUE`, i.e.), it specifies the subject or repeated
+#'   measures identifier. **Important**: Note that if this argument is `NULL`
+#'   (which is the default), the function assumes that the data has already been
+#'   sorted by such an id by the user and creates an internal identifier. So if
+#'   your data is **not** sorted and you leave this argument unspecified, the
+#'   results *can* be inaccurate when there are more than two levels in `x` and
+#'   there are `NA`s present.
 #' @param paired Logical that decides whether the experimental design is
 #'   repeated measures/within-subjects or between-subjects. The default is
 #'   `FALSE`.
@@ -31,7 +39,7 @@
 #'   `paired = TRUE`.
 #' @param ... Currently ignored.
 #'
-#' @importFrom dplyr row_number select mutate group_by ungroup arrange everything
+#' @importFrom dplyr row_number select mutate group_by ungroup arrange relocate
 #' @importFrom dplyr nest_by filter
 #' @importFrom tidyr pivot_longer unnest
 #'
@@ -101,5 +109,5 @@ long_to_wide_converter <- function(data,
   if (spread && paired) data %<>% tidyr::pivot_wider(names_from = {{ x }}, values_from = {{ y }})
 
   # final clean-up
-  as_tibble(dplyr::select(data, rowid, dplyr::everything()) %>% dplyr::arrange(rowid))
+  as_tibble(dplyr::relocate(data, rowid) %>% dplyr::arrange(rowid))
 }
